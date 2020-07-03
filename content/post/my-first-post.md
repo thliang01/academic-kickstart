@@ -47,3 +47,22 @@ NOTE: It does not control any actual cloud resources nor does it generate cloud 
 
 
 Hugo 的教學文件有提供一個簡單的 script 來讓你快速執行發布這件事情，他也是使用 git submodule 來達成這件事，但我不太喜歡 git submodule，所以我稍微改了一下，讓他變成一般的獨立 project，可參考以下的 script，第一次執行我建議先一行一行手動執行看看。
+
+---
+
+準備 Base Image
+===
+
+這個 Base Image 會用在安裝 Master / Worker Node.
+
+* 虛擬環境：
+    * 在 VMWare 上，將 Guest OS 的網路設定為 Bridge Mode。
+    * Proxmox  上，同樣將 Guest OS 的網路設定為 Bridge Mode
+* 安裝 ubuntu 16.04 or ubuntu 18.04
+    * 關閉 swap: swapoff -a
+    * 註解 /etc/fstab
+* 注意：
+    * LAN 裡面的 DHCP Lease Time 可以調大一點，避免太早過期，下次 Cluster 跑不起來。
+    * 如果要使用 PV 的話，Disk Size 不能太小，建議 80GiB 以上。
+    ** VMWare 如果使用 Linked Clone 會造成 Disk Size 無法調整。
+
