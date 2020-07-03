@@ -9,6 +9,8 @@
 
 [zh]
     languageCode = "zh-Hant"
+    # contentDir = "content/zh-Hant"
+
 
 # Uncomment the lines below to configure your website in a second language.
 #[zh]
