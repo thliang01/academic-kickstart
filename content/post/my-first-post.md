@@ -66,3 +66,8 @@ Hugo 的教學文件有提供一個簡單的 script 來讓你快速執行發布�
     * 如果要使用 PV 的話，Disk Size 不能太小，建議 80GiB 以上。
     ** VMWare 如果使用 Linked Clone 會造成 Disk Size 無法調整。
 
+---
+
+GGGGG
+---
+
